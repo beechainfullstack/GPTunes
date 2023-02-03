@@ -26,11 +26,11 @@ def index():
 
 
 def generate_prompt(key, scale):
-    return """Generate a chord progression in the key of {} using the scale of {}.
+    return """Generate a 4-chord progression in the key of {} using the scale of {}.
 Represent chords using the following format: [chord name][chord quality][inversion], where chord name can be [A-G], chord quality can be [maj, min, aug, dim], and inversion can be [1, 2, 3].
 
 Example: Cmaj7
 
 Please provide the chord progression in the following format:
 Key & Scale:[key] [scale]
-[chord][chord][chord][chord]""".format(key, scale.capitalize())
+Progression:[chord][chord][chord][chord]""".format(key, scale.capitalize())

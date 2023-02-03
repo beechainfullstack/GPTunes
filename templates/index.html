@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {background-color: #01150e;}
+        code {color: #84DD63;}
+        li{list-style: none;}
+        :any-link{color: #98473E;text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div class="align-items-center justify-content-center mt-5 pt-3" style="height: 40vh;">
+        <h1 class="text-center text-white pb-5">GPTunes🎶</h1>
+        <p class="text-center text-white">generate chord progressions with GPT-3!</p>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+    </div>
+    <div class="d-flex align-items-center justify-content-center" style="height: 0vh;">
+    <form class="align-center" action="/" method="post">
+        <div class="form-group">
+            <label for="key" class="text-white">Key:</label>
+            <select class="form-control" id="key" name="key">
+                <option value="C">C</option>
+                <option value="C#">C#</option>
+                <option value="D">D</option>
+                <option value="D#">D#</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="F#">F#</option>
+                <option value="G">G</option>
+                <option value="G#">G#</option>
+                <option value="A">A</option>
+                <option value="A#">A#</option>
+                <option value="B">B</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="scale" class="text-white">Scale:</label>
+            <select class="form-control" id="scale" name="scale">
+                <option value="major">Major</option>
+                <option value="minor">Minor</option>
+                <option value="harmonic minor">Harmonic Minor</option>
+                <option value="melodic minor">Melodic Minor</option>
+            </select>
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            <input type="submit" class = "btn btn-secondary mt-3" value="Generate Melody!"></div>
+        </div>
+    </form>
+    {% if result %}
+    <br>
+    <div class="result text-white text-center pt-5 mt-5"><br>{{ result }}</div>
+    {% endif %}
+    <div class="text-center text-white mt-5">
+        <ul>🙏supporting the devs is <em><strong>greatly</strong></em> appreciated - thank you!</ul>
+        <li>Ξ ENS: <code>beechain.eth</code></li> 
+        <li>⟠ ETH/ERC-20 (QR): <code>0x950cab0bf5b6ae2fc1224d13fe3d7de40b113634</code></li>
+        <li>₿ BTC (QR): <code>bc1q6utrcpwquzuu5rm6zd6suc4ewsjcdhy6eujzh9</code></li>
+        <a href="https://beechain.vercel.app">🌐beechainsite</a>
+    </div>
+</body>
+</html>

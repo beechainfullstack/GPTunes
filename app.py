@@ -32,5 +32,4 @@ Represent chords using the following format: [chord name][chord quality][inversi
 Example: Cmaj7
 
 Please provide the chord progression in the following format:
-Key & Scale:[key] [scale]
-Progression:[chord][chord][chord][chord]""".format(key, scale.capitalize())
+[chord][chord][chord][chord]""".format(key, scale.capitalize())
